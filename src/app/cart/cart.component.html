@@ -1,0 +1,15 @@
+<h3>Cart Details</h3>
+
+<div *ngFor="let product of items">
+  <h3>
+    <a
+      [title]="product.name + ' details'"
+      [routerLink]="['/products', product.id]"
+      >{{ product.name }}</a
+    >
+  </h3>
+
+  <p *ngIf="product.description">
+    Description: {{ product.description }}
+  </p>
+</div>
